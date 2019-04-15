@@ -173,6 +173,7 @@ namespace ScriptPlayer.Shared
             try
             {
                 var client = new WebClient();
+                client.Encoding = System.Text.Encoding.UTF8;
                 return client.DownloadString(new Uri($"http://{_connectionSettings.IpAndPort}/{filename}"));
             }
             catch
